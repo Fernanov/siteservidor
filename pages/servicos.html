@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <!-- Link dos icones da Material UI -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <title>Serviços</title>
+    <style>
+
+      * {
+        font-family: 'Montserrat';
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+
+      .wrapper{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        place-items: center;
+        min-height: 100vh;
+      }
+
+      .grid-container{
+        margin: 20px auto;
+        display: grid;
+        grid-template-columns: 30vw 30vw 30vw;
+        grid-template-rows: auto auto auto;
+        gap: 10px;
+        width: 60vw;
+        /* height: 450px; */
+      }
+
+      .left{
+        text-align: center;
+        background-color: #1a1a1a;
+        grid-column: 1;
+        border-radius: 25px;
+        padding: 10px;
+      }
+
+      .right{
+        text-align: center;
+        background-color: #1a1a1a;
+        grid-column: 2;
+        border-radius: 25px;
+        padding: 10px;
+      }
+
+      .text-title {
+        font-family: 'Montserrat';
+        font-size: 2.3vw;
+      }
+
+      .btn-goto-contato {
+        background-color: transparent;
+        font-family: "Poppins";
+        font-size: large;
+        border-radius: 8px;
+        border: 2px solid #FF00b1;
+        padding: 5px;
+        transition-duration: 0.4s;
+      }
+
+      .btn-goto-contato:hover {
+        background-color: #FF00b1;
+        color: #fff;
+      }
+
+      .goto-contato {
+        color: white;
+        font-family: 'Montserrat';
+        font-size: 1.4vw;
+      }
+
+      .pricing {
+        font-size: 3vw;
+        margin: 0;
+        padding: 0;
+      } 
+
+      #boldpink {
+        color: #ff00b1;
+      }
+
+      @media screen and (max-width: 800px) { 
+        .grid-container {
+          margin: 20px auto;
+          display: grid;
+          grid-template-columns: 30vw 30vw 30vw;
+          grid-template-rows: auto auto auto;
+          gap: 10px;
+          width: 60vw;
+          /* height: 450px; */
+        }
+        .left {
+          grid-column: 1/ span 2;
+          grid-row: 1;
+        }
+        .right {
+          grid-column: 1/ span 2;
+          grid-row: 2;
+        }
+      }
+
+      #texto_personalizado {
+        
+        text-align: center;
+        
+        margin: 20px auto;
+        
+        max-width: 80%;
+
+        font-family: 'Montserrat';
+        font-size: 2.5vw;
+        
+        line-height: 3vw;
+        color: #ffffff; 
+      }
+
+    </style>
+  </head>
+  <body>
+      <nav class="navbar">
+        <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+  
+        <button type="button" class="navbar-burger" onclick="toggleMenuOpen()">
+          <span class="material-icons">menu</span>
+        </button>
+        
+        <div class="navbar-title"><a href="../index.html"><img class="navbar-title-logo" src="img/ai provider logo@2x 1.png" alt="AiProvider_Logo_Small"></a></div>
+  
+        <nav class="navbar-menu">
+          <button type="button" class="active"><a href="servicos.html" class="goto">Serviços</a></button>
+          <button type="button" class="active"><a href="contato.html" class="goto">Contato</a></button>
+          <button type="button" class="active"><a href="parceiros.html" class="goto">Parceiros</a></button>
+          <button type="button" class="active"><a href="entrar.html" class="goto">Entrar</a></button>
+          <button type="button" class="active"><a href="cadastro.html" class="goto"><img id="button-cadastrar" src="img/Cadastrar.png" alt="Button Cadastrar"></a></button>  
+        </nav>
+      </nav>
+      <br><br><br><br><br><br><br><br>
+     
+      <p id = "texto_personalizado"><b id = "boldpink">Inteligência Artificial</b> para uma experiência de atendimento personalizada, eficaz e humanizada.</p> 
+      <div class="wrapper">
+        
+        <div class="grid-container">
+          <div class="left">
+            <br><br><br><br><br><br><br><br>
+            <p class="pricing"><b id="boldpink">R$</b> 360,55 p/mês</p>
+            <br><br><br><br><br><br><br><br>
+              <h2 class="text-title">Contato ao provedor</h2>
+                <br><br>
+              <div class="main-text">
+                <button class="btn-goto-contato"><a class="goto-contato" href="contato.html">Contate-nos sobre sua escolha</a></button>
+              </div>
+          </div>
+          
+          <div class="right">
+            <br><br><br><br><br><br><br><br>
+            <p class="pricing"><b id="boldpink">R$</b> SUA ESCOLHA</p>
+            <br><br><br><br><br><br><br><br>
+              <h2 class="text-title">Contato ao provedor</h2>
+              <br><br>
+              <div class="main-text">
+                <button class="btn-goto-contato"><a class="goto-contato" href="contato.html">Contate-nos sobre seu preço</a></button>
+              </div>
+          </div>
+        </div>   
+      </div> 
+
+      <script type="text/javascript">
+        const toggleMenuOpen = () => document.body.classList.toggle("open");
+      </script>
+  </body>
+</html>
